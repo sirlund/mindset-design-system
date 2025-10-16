@@ -1,3 +1,5 @@
+@import '../../tokens/tokens.css';
+
 /* Icon Base Styles */
 .icon {
   display: inline-flex;
@@ -16,23 +18,23 @@
 
 /* Icon Sizes */
 .icon--xs {
-  width: 16px;
-  height: 16px;
+  width: var(--scale-200);
+  height: var(--scale-200);
 }
 
 .icon--s {
-  width: 20px;
-  height: 20px;
+  width: var(--scale-250);
+  height: var(--scale-250);
 }
 
 .icon--m {
-  width: 24px;
-  height: 24px;
+  width: var(--scale-300);
+  height: var(--scale-300);
 }
 
 .icon--l {
-  width: 32px;
-  height: 32px;
+  width: var(--scale-400);
+  height: var(--scale-400);
 }
 
 /* Clickable Icons */
@@ -51,43 +53,43 @@
 
 /* Icon Colors */
 .icon--primary {
-  color: #29292a;
+  color: var(--color-content-primary);
 }
 
 .icon--secondary {
-  color: #6d6d6e;
+  color: var(--color-content-secondary);
 }
 
 .icon--accent {
-  color: #0069ff;
+  color: var(--color-accent-default);
 }
 
 .icon--success {
-  color: #10b981;
+  color: var(--color-feedback-positive-default);
 }
 
 .icon--warning {
-  color: #f59e0b;
+  color: var(--color-feedback-warning-default);
 }
 
 .icon--error {
-  color: #ef4444;
+  color: var(--color-feedback-negative-default);
 }
 
 .icon--white {
-  color: #ffffff;
+  color: var(--color-content-on-inverted-heading);
 }
 
 /* Responsive Design */
 @media (max-width: 640px) {
   .icon--l {
-    width: 28px;
-    height: 28px;
+    width: var(--scale-350);
+    height: var(--scale-350);
   }
   
   .icon--m {
-    width: 22px;
-    height: 22px;
+    width: var(--scale-275);
+    height: var(--scale-275);
   }
 }
 

@@ -8,12 +8,17 @@ export interface ButtonProps {
   children: React.ReactNode;
   /**
    * The variant of the button
+   * - primary: Dark background (inverted)
+   * - accent: Blue background (secondary)
+   * - tertiary: Transparent with border (ghost)
+   * - text: No background or border
+   * - danger: Red for destructive actions
    */
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger';
+  variant?: 'primary' | 'accent' | 'tertiary' | 'text' | 'danger';
   /**
    * The size of the button
    */
-  size?: 'small' | 'medium' | 'large';
+  size?: 'xsmall' | 'small' | 'medium' | 'large';
   /**
    * Whether the button is disabled
    */
@@ -99,12 +104,10 @@ export const Button: React.FC<ButtonProps> = ({
               className="btn__spinner-circle"
               cx="12"
               cy="12"
-              r="10"
+              r="9"
               stroke="currentColor"
-              strokeWidth="2"
+              strokeWidth="3"
               strokeLinecap="round"
-              strokeDasharray="31.416"
-              strokeDashoffset="31.416"
             />
           </svg>
         </span>

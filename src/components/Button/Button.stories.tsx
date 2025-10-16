@@ -33,17 +33,18 @@ The primary button component with support for 4 types, 4 sizes, and 5 states.
 
 ## Design System Properties
 
-### Type (4 options)
-- **Primary** - Main call-to-action buttons
-- **Secondary** - Accent/secondary actions (maps to Figma "Accent (Secondary)")
-- **Ghost** - Tertiary actions with minimal styling (maps to Figma "Ghost (Tertiary)")
-- **Outline** - Outline style variant (custom implementation)
+### Type (5 options)
+- **Primary** - Dark/inverted background for main CTAs (maps to Figma "Primary")
+- **Accent** - Blue background for secondary actions (maps to Figma "Accent (Secondary)")
+- **Tertiary** - Ghost style with border (maps to Figma "Ghost (Tertiary)")
+- **Text** - Minimal text-only button (maps to Figma "Text")
+- **Danger** - Red for destructive actions
 
 ### Size (4 options)
-- **XSmall** - Extra small for compact UIs (~24px height)
-- **Small** - Small buttons for dense layouts (~32px height)
-- **Medium** - Default size for most use cases (~40px height)
-- **Large** - Large buttons for emphasis (~48px height)
+- **XSmall** - Extra small for compact UIs (24px height)
+- **Small** - Small buttons for dense layouts (32px height)
+- **Medium** - Default size for most use cases (40px height)
+- **Large** - Large buttons for emphasis (48px height)
 
 ### States
 All buttons support: Default, Hover, Active, Focus, and Disabled states
@@ -62,8 +63,8 @@ See [MINDSET_DESIGN_SYSTEM.md](../../../MINDSET_DESIGN_SYSTEM.md) for complete d
   argTypes: {
     variant: {
       control: { type: 'select' },
-      options: ['primary', 'secondary', 'outline', 'ghost', 'danger'],
-      description: 'The visual style variant (Primary, Secondary/Accent, Ghost/Tertiary, Outline)',
+      options: ['primary', 'accent', 'tertiary', 'text', 'danger'],
+      description: 'The visual style variant',
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: 'primary' },
@@ -71,8 +72,8 @@ See [MINDSET_DESIGN_SYSTEM.md](../../../MINDSET_DESIGN_SYSTEM.md) for complete d
     },
     size: {
       control: { type: 'select' },
-      options: ['small', 'medium', 'large'],
-      description: 'Button size (Figma sizes: XSmall, Small, Medium, Large)',
+      options: ['xsmall', 'small', 'medium', 'large'],
+      description: 'Button size from Figma design system',
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: 'medium' },
@@ -145,24 +146,24 @@ export const Primary: Story = {
   },
 };
 
-export const Secondary: Story = {
+export const Accent: Story = {
   args: {
-    children: 'Secondary Button',
-    variant: 'secondary',
+    children: 'Accent Button',
+    variant: 'accent',
   },
 };
 
-export const Outline: Story = {
+export const Tertiary: Story = {
   args: {
-    children: 'Outline Button',
-    variant: 'outline',
+    children: 'Tertiary Button',
+    variant: 'tertiary',
   },
 };
 
-export const Ghost: Story = {
+export const Text: Story = {
   args: {
-    children: 'Ghost Button',
-    variant: 'ghost',
+    children: 'Text Button',
+    variant: 'text',
   },
 };
 
@@ -249,9 +250,9 @@ export const AllVariants: Story = {
   render: () => (
     <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
       <Button variant="primary">Primary</Button>
-      <Button variant="secondary">Secondary (Accent)</Button>
-      <Button variant="outline">Outline</Button>
-      <Button variant="ghost">Ghost (Tertiary)</Button>
+      <Button variant="accent">Accent</Button>
+      <Button variant="tertiary">Tertiary</Button>
+      <Button variant="text">Text</Button>
       <Button variant="danger">Danger</Button>
     </div>
   ),
@@ -295,19 +296,19 @@ export const AllStates: Story = {
         </div>
       </div>
       <div>
-        <h4 style={{ marginBottom: '12px' }}>Secondary (Accent) Button States</h4>
+        <h4 style={{ marginBottom: '12px' }}>Accent Button States</h4>
         <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-          <Button variant="secondary">Default</Button>
-          <Button variant="secondary" disabled>Disabled</Button>
-          <Button variant="secondary" loading>Loading</Button>
+          <Button variant="accent">Default</Button>
+          <Button variant="accent" disabled>Disabled</Button>
+          <Button variant="accent" loading>Loading</Button>
         </div>
       </div>
       <div>
-        <h4 style={{ marginBottom: '12px' }}>Ghost (Tertiary) Button States</h4>
+        <h4 style={{ marginBottom: '12px' }}>Tertiary Button States</h4>
         <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-          <Button variant="ghost">Default</Button>
-          <Button variant="ghost" disabled>Disabled</Button>
-          <Button variant="ghost" loading>Loading</Button>
+          <Button variant="tertiary">Default</Button>
+          <Button variant="tertiary" disabled>Disabled</Button>
+          <Button variant="tertiary" loading>Loading</Button>
         </div>
       </div>
     </div>
@@ -334,19 +335,21 @@ export const DesignSystemMatrix: Story = {
         </div>
       </div>
       <div>
-        <h4 style={{ marginBottom: '12px' }}>Secondary (Accent) - All Sizes</h4>
+        <h4 style={{ marginBottom: '12px' }}>Accent - All Sizes</h4>
         <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-          <Button variant="secondary" size="small">Small</Button>
-          <Button variant="secondary" size="medium">Medium</Button>
-          <Button variant="secondary" size="large">Large</Button>
+          <Button variant="accent" size="xsmall">XSmall</Button>
+          <Button variant="accent" size="small">Small</Button>
+          <Button variant="accent" size="medium">Medium</Button>
+          <Button variant="accent" size="large">Large</Button>
         </div>
       </div>
       <div>
-        <h4 style={{ marginBottom: '12px' }}>Ghost (Tertiary) - All Sizes</h4>
+        <h4 style={{ marginBottom: '12px' }}>Tertiary - All Sizes</h4>
         <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-          <Button variant="ghost" size="small">Small</Button>
-          <Button variant="ghost" size="medium">Medium</Button>
-          <Button variant="ghost" size="large">Large</Button>
+          <Button variant="tertiary" size="xsmall">XSmall</Button>
+          <Button variant="tertiary" size="small">Small</Button>
+          <Button variant="tertiary" size="medium">Medium</Button>
+          <Button variant="tertiary" size="large">Large</Button>
         </div>
       </div>
     </div>
