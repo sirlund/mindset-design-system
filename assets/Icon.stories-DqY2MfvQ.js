@@ -1,0 +1,80 @@
+import{j as e}from"./jsx-runtime-D_zvdyIk.js";import"./iframe-Oeabo4ON.js";/* empty css             */import"./preload-helper-D9Z9MdNV.js";const a=({name:l,size:i="M",className:s="",color:d="#29292a",onClick:m})=>{const o={XS:16,S:20,M:24,L:32}[i],c={add:"M12 5v14M5 12h14","add-circle":"M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zM12 8v8M8 12h8","alert-circle":"M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zM12 8v4M12 16h.01","alert-triangle":"M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0zM12 9v4M12 17h.01",archive:"M21 8v13H3V8M1 3h22l-1 5H2zM10 12h4","arrow-down":"M12 5v14M19 12l-7 7-7-7","arrow-left":"M19 12H5M12 19l-7-7 7-7","arrow-right":"M5 12h14M12 5l7 7-7 7","arrow-up":"M12 19V5M5 12l7-7 7 7",bell:"M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0",trash:"M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6M10 11v6M14 11v6",building:"M3 21h18M5 21V7l8-4v18M19 21V11l-6-4",calendar:"M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z",camera:"M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2zM12 17a4 4 0 1 0 0-8 4 4 0 0 0 0 8z",check:"M20 6L9 17l-5-5","chevron-down":"M6 9l6 6 6-6","chevron-left":"M15 18l-6-6 6-6","chevron-right":"M9 18l6-6-6-6","chevron-up":"M18 15l-6-6-6 6",close:"M18 6L6 18M6 6l12 12",mail:"M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zM22 6l-10 7L2 6",folder:"M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z","folder-open":"M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2zM2 9h20",lock:"M19 11H5a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2zM7 11V7a5 5 0 0 1 10 0v4",menu:"M3 12h18M3 6h18M3 18h18",pencil:"M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z","question-circle":"M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z",remove:"M18 6L6 18M6 6l12 12",search:"M21 21l-6-6m2-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0z",settings:"M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z",upload:"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12",user:"M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z",view:"M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8zM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6z","view-off":"M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24M1 1l22 22"}[l];return c?e.jsx("div",{className:`icon icon--${i.toLowerCase()} ${s}`,onClick:m,style:{color:d},children:e.jsx("svg",{width:o,height:o,viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round",children:e.jsx("path",{d:c})})}):(console.warn(`Icon "${l}" not found`),null)};a.__docgenInfo={description:"",methods:[],displayName:"Icon",props:{name:{required:!0,tsType:{name:"union",raw:`| 'add'
+| 'add-circle'
+| 'alert-circle'
+| 'alert-triangle'
+| 'archive'
+| 'arrow-down'
+| 'arrow-left'
+| 'arrow-right'
+| 'arrow-up'
+| 'bell'
+| 'trash'
+| 'building'
+| 'calendar'
+| 'camera'
+| 'check'
+| 'chevron-down'
+| 'chevron-left'
+| 'chevron-right'
+| 'chevron-up'
+| 'close'
+| 'mail'
+| 'folder'
+| 'folder-open'
+| 'lock'
+| 'menu'
+| 'pencil'
+| 'question-circle'
+| 'remove'
+| 'search'
+| 'settings'
+| 'upload'
+| 'user'
+| 'view'
+| 'view-off'`,elements:[{name:"literal",value:"'add'"},{name:"literal",value:"'add-circle'"},{name:"literal",value:"'alert-circle'"},{name:"literal",value:"'alert-triangle'"},{name:"literal",value:"'archive'"},{name:"literal",value:"'arrow-down'"},{name:"literal",value:"'arrow-left'"},{name:"literal",value:"'arrow-right'"},{name:"literal",value:"'arrow-up'"},{name:"literal",value:"'bell'"},{name:"literal",value:"'trash'"},{name:"literal",value:"'building'"},{name:"literal",value:"'calendar'"},{name:"literal",value:"'camera'"},{name:"literal",value:"'check'"},{name:"literal",value:"'chevron-down'"},{name:"literal",value:"'chevron-left'"},{name:"literal",value:"'chevron-right'"},{name:"literal",value:"'chevron-up'"},{name:"literal",value:"'close'"},{name:"literal",value:"'mail'"},{name:"literal",value:"'folder'"},{name:"literal",value:"'folder-open'"},{name:"literal",value:"'lock'"},{name:"literal",value:"'menu'"},{name:"literal",value:"'pencil'"},{name:"literal",value:"'question-circle'"},{name:"literal",value:"'remove'"},{name:"literal",value:"'search'"},{name:"literal",value:"'settings'"},{name:"literal",value:"'upload'"},{name:"literal",value:"'user'"},{name:"literal",value:"'view'"},{name:"literal",value:"'view-off'"}]},description:""},size:{required:!1,tsType:{name:"union",raw:"'XS' | 'S' | 'M' | 'L'",elements:[{name:"literal",value:"'XS'"},{name:"literal",value:"'S'"},{name:"literal",value:"'M'"},{name:"literal",value:"'L'"}]},description:"",defaultValue:{value:"'M'",computed:!1}},className:{required:!1,tsType:{name:"string"},description:"",defaultValue:{value:"''",computed:!1}},color:{required:!1,tsType:{name:"string"},description:"",defaultValue:{value:"'#29292a'",computed:!1}},onClick:{required:!1,tsType:{name:"signature",type:"function",raw:"(event: React.MouseEvent<HTMLDivElement>) => void",signature:{arguments:[{type:{name:"ReactMouseEvent",raw:"React.MouseEvent<HTMLDivElement>",elements:[{name:"HTMLDivElement"}]},name:"event"}],return:{name:"void"}}},description:""}}};const g={title:"Components/Icon",component:a,parameters:{layout:"centered"},argTypes:{name:{control:{type:"select"},options:["add","edit","trash","settings","calendar","arrow-right"]},size:{control:{type:"select"},options:["XS","S","M","L"]},color:{control:{type:"color"}}},tags:["autodocs"]},r={args:{name:"add",size:"M"}},n={render:()=>e.jsxs("div",{style:{display:"flex",gap:"16px",alignItems:"center"},children:[e.jsx(a,{name:"add",size:"XS"}),e.jsx(a,{name:"add",size:"S"}),e.jsx(a,{name:"add",size:"M"}),e.jsx(a,{name:"add",size:"L"})]})},t={render:()=>e.jsx("div",{style:{display:"grid",gridTemplateColumns:"repeat(auto-fill, minmax(60px, 1fr))",gap:"16px",maxWidth:"400px"},children:["add","add-circle","alert-circle","alert-triangle","archive","arrow-down","arrow-left","arrow-right","arrow-up","bell","trash","building","calendar","camera","check","chevron-down","chevron-left","chevron-right","chevron-up","close","mail","folder","folder-open","lock","menu","pencil","question-circle","remove","search","settings","upload","user","view","view-off"].map(l=>e.jsxs("div",{style:{display:"flex",flexDirection:"column",alignItems:"center",gap:"4px",padding:"8px",border:"1px solid #e2e8f0",borderRadius:"8px",backgroundColor:"#f8fafc"},children:[e.jsx(a,{name:l,size:"M"}),e.jsx("span",{style:{fontSize:"10px",color:"#64748b",textAlign:"center"},children:l})]},l))}),parameters:{layout:"padded"}};r.parameters={...r.parameters,docs:{...r.parameters?.docs,source:{originalSource:`{
+  args: {
+    name: 'add',
+    size: 'M'
+  }
+}`,...r.parameters?.docs?.source}}};n.parameters={...n.parameters,docs:{...n.parameters?.docs,source:{originalSource:`{
+  render: () => <div style={{
+    display: 'flex',
+    gap: '16px',
+    alignItems: 'center'
+  }}>
+      <Icon name="add" size="XS" />
+      <Icon name="add" size="S" />
+      <Icon name="add" size="M" />
+      <Icon name="add" size="L" />
+    </div>
+}`,...n.parameters?.docs?.source}}};t.parameters={...t.parameters,docs:{...t.parameters?.docs,source:{originalSource:`{
+  render: () => <div style={{
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fill, minmax(60px, 1fr))',
+    gap: '16px',
+    maxWidth: '400px'
+  }}>
+      {['add', 'add-circle', 'alert-circle', 'alert-triangle', 'archive', 'arrow-down', 'arrow-left', 'arrow-right', 'arrow-up', 'bell', 'trash', 'building', 'calendar', 'camera', 'check', 'chevron-down', 'chevron-left', 'chevron-right', 'chevron-up', 'close', 'mail', 'folder', 'folder-open', 'lock', 'menu', 'pencil', 'question-circle', 'remove', 'search', 'settings', 'upload', 'user', 'view', 'view-off'].map(iconName => <div key={iconName} style={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      gap: '4px',
+      padding: '8px',
+      border: '1px solid #e2e8f0',
+      borderRadius: '8px',
+      backgroundColor: '#f8fafc'
+    }}>
+          <Icon name={iconName as any} size="M" />
+          <span style={{
+        fontSize: '10px',
+        color: '#64748b',
+        textAlign: 'center'
+      }}>
+            {iconName}
+          </span>
+        </div>)}
+    </div>,
+  parameters: {
+    layout: 'padded'
+  }
+}`,...t.parameters?.docs?.source}}};const w=["Default","AllSizes","AllIcons"];export{t as AllIcons,n as AllSizes,r as Default,w as __namedExportsOrder,g as default};
