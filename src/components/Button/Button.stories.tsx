@@ -17,7 +17,7 @@ const ArrowRightIcon = () => (
 );
 
 const meta: Meta<typeof Button> = {
-  title: 'MindSet Design System/Button',
+  title: 'Components/Button',
   component: Button,
   parameters: {
     layout: 'centered',
@@ -144,12 +144,26 @@ export const Primary: Story = {
     children: 'Primary Button',
     variant: 'primary',
   },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Primary button with dark/inverted background for main CTAs.',
+      },
+    },
+  },
 };
 
 export const Accent: Story = {
   args: {
     children: 'Accent Button',
     variant: 'accent',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Accent button with blue background for secondary actions.',
+      },
+    },
   },
 };
 
@@ -158,12 +172,26 @@ export const Tertiary: Story = {
     children: 'Tertiary Button',
     variant: 'tertiary',
   },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Tertiary button with transparent background and border.',
+      },
+    },
+  },
 };
 
 export const Text: Story = {
   args: {
     children: 'Text Button',
     variant: 'text',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Text-only button with no background or border.',
+      },
+    },
   },
 };
 
@@ -174,12 +202,13 @@ export const Danger: Story = {
   },
 };
 
-// Sizes
+// Sizes - Hidden from sidebar, visible in docs
 export const Small: Story = {
   args: {
     children: 'Small Button',
     size: 'small',
   },
+  tags: ['!dev'],
 };
 
 export const Medium: Story = {
@@ -187,6 +216,7 @@ export const Medium: Story = {
     children: 'Medium Button',
     size: 'medium',
   },
+  tags: ['!dev'],
 };
 
 export const Large: Story = {
@@ -194,14 +224,16 @@ export const Large: Story = {
     children: 'Large Button',
     size: 'large',
   },
+  tags: ['!dev'],
 };
 
-// States
+// States - Hidden from sidebar, visible in docs
 export const Disabled: Story = {
   args: {
     children: 'Disabled Button',
     disabled: true,
   },
+  tags: ['!dev'],
 };
 
 export const Loading: Story = {
@@ -209,14 +241,16 @@ export const Loading: Story = {
     children: 'Loading Button',
     loading: true,
   },
+  tags: ['!dev'],
 };
 
-// With Icons
+// With Icons - Hidden from sidebar, visible in docs
 export const WithStartIcon: Story = {
   args: {
     children: 'Add Item',
     startIcon: <PlusIcon />,
   },
+  tags: ['!dev'],
 };
 
 export const WithEndIcon: Story = {
@@ -224,6 +258,7 @@ export const WithEndIcon: Story = {
     children: 'Continue',
     endIcon: <ArrowRightIcon />,
   },
+  tags: ['!dev'],
 };
 
 export const WithBothIcons: Story = {
@@ -232,9 +267,10 @@ export const WithBothIcons: Story = {
     startIcon: <PlusIcon />,
     endIcon: <ArrowRightIcon />,
   },
+  tags: ['!dev'],
 };
 
-// Full Width
+// Full Width - Hidden from sidebar, visible in docs
 export const FullWidth: Story = {
   args: {
     children: 'Full Width Button',
@@ -243,6 +279,7 @@ export const FullWidth: Story = {
   parameters: {
     layout: 'padded',
   },
+  tags: ['!dev'],
 };
 
 // All Variants

@@ -1,10 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
+import '../../tokens/tokens.css';
 
 // Simple IconButton component for documentation purposes
 // In a real implementation, this would be a separate component file
 interface IconButtonProps {
-  variant?: 'primary' | 'secondary' | 'ghost' | 'text';
+  variant?: 'primary' | 'accent' | 'tertiary' | 'text';
   size?: 's' | 'xs';
   circle?: boolean;
   disabled?: boolean;
@@ -29,6 +30,35 @@ const IconButton: React.FC<IconButtonProps> = ({
     disabled ? `${baseClass}--disabled` : '',
   ].filter(Boolean).join(' ');
 
+  const getBackgroundColor = () => {
+    if (disabled) return 'var(--color-surface-layer)';
+    switch (variant) {
+      case 'primary': return 'var(--color-surface-background-inverted)';
+      case 'accent': return 'var(--color-accent-default)';
+      case 'tertiary': return 'transparent';
+      case 'text': return 'transparent';
+      default: return 'var(--color-accent-default)';
+    }
+  };
+
+  const getColor = () => {
+    if (disabled) return 'var(--color-content-disabled)';
+    switch (variant) {
+      case 'primary': return 'var(--color-content-on-inverted-heading)';
+      case 'accent': return 'var(--color-content-on-inverted-heading)';
+      case 'tertiary': return 'var(--color-accent-default)';
+      case 'text': return 'var(--color-accent-default)';
+      default: return 'var(--color-content-on-inverted-heading)';
+    }
+  };
+
+  const getBorder = () => {
+    if (variant === 'tertiary') {
+      return `var(--stroke-thin) solid var(--color-stroke-medium)`;
+    }
+    return 'none';
+  };
+
   return (
     <button
       className={classes}
@@ -38,24 +68,16 @@ const IconButton: React.FC<IconButtonProps> = ({
         display: 'inline-flex',
         alignItems: 'center',
         justifyContent: 'center',
-        border: variant === 'ghost' ? '1px solid #e0e0e0' : 'none',
-        backgroundColor:
-          disabled ? '#f0f0f0' :
-          variant === 'primary' ? '#5747ea' :
-          variant === 'secondary' ? '#00c48c' :
-          variant === 'ghost' ? 'transparent' :
-          'transparent',
-        color:
-          disabled ? '#999' :
-          variant === 'text' ? '#5747ea' :
-          variant === 'ghost' ? '#333' :
-          '#fff',
-        width: size === 's' ? '40px' : '32px',
-        height: size === 's' ? '40px' : '32px',
-        borderRadius: circle ? '50%' : '8px',
+        border: getBorder(),
+        backgroundColor: getBackgroundColor(),
+        color: getColor(),
+        width: size === 's' ? 'var(--scale-500)' : 'var(--scale-400)',
+        height: size === 's' ? 'var(--scale-500)' : 'var(--scale-400)',
+        borderRadius: circle ? '50%' : 'var(--radius-m)',
         cursor: disabled ? 'not-allowed' : 'pointer',
         transition: 'all 0.2s',
         padding: 0,
+        fontFamily: 'var(--font-family-default)',
       }}
     >
       {children}
@@ -94,7 +116,7 @@ const EditIcon = () => (
 );
 
 const meta: Meta<typeof IconButton> = {
-  title: 'MindSet Design System/IconButton',
+  title: 'Components/Button/IconButton',
   component: IconButton,
   parameters: {
     layout: 'centered',
@@ -195,10 +217,10 @@ export const AllTypes: Story = {
       <IconButton variant="primary">
         <SearchIcon />
       </IconButton>
-      <IconButton variant="secondary">
+      <IconButton variant="accent">
         <SearchIcon />
       </IconButton>
-      <IconButton variant="ghost">
+      <IconButton variant="tertiary">
         <SearchIcon />
       </IconButton>
       <IconButton variant="text">
@@ -225,10 +247,10 @@ export const SquareVsCircle: Story = {
           <IconButton variant="primary" circle={false}>
             <SearchIcon />
           </IconButton>
-          <IconButton variant="secondary" circle={false}>
+          <IconButton variant="accent" circle={false}>
             <EditIcon />
           </IconButton>
-          <IconButton variant="ghost" circle={false}>
+          <IconButton variant="tertiary" circle={false}>
             <MenuIcon />
           </IconButton>
           <IconButton variant="text" circle={false}>
@@ -242,10 +264,10 @@ export const SquareVsCircle: Story = {
           <IconButton variant="primary" circle={true}>
             <SearchIcon />
           </IconButton>
-          <IconButton variant="secondary" circle={true}>
+          <IconButton variant="accent" circle={true}>
             <EditIcon />
           </IconButton>
-          <IconButton variant="ghost" circle={true}>
+          <IconButton variant="tertiary" circle={true}>
             <MenuIcon />
           </IconButton>
           <IconButton variant="text" circle={true}>
@@ -316,13 +338,13 @@ export const States: Story = {
         <h4 style={{ marginBottom: '12px' }}>Ghost IconButton States</h4>
         <div style={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
           <div style={{ textAlign: 'center' }}>
-            <IconButton variant="ghost">
+            <IconButton variant="tertiary">
               <SearchIcon />
             </IconButton>
             <p style={{ fontSize: '12px', marginTop: '8px' }}>Default</p>
           </div>
           <div style={{ textAlign: 'center' }}>
-            <IconButton variant="ghost" disabled>
+            <IconButton variant="tertiary" disabled>
               <SearchIcon />
             </IconButton>
             <p style={{ fontSize: '12px', marginTop: '8px' }}>Disabled</p>
@@ -351,8 +373,8 @@ export const CompleteMatrix: Story = {
             <h4 style={{ marginBottom: '8px', fontSize: '14px' }}>Size: S</h4>
             <div style={{ display: 'flex', gap: '12px' }}>
               <IconButton variant="primary" size="s" circle={false}><SearchIcon /></IconButton>
-              <IconButton variant="secondary" size="s" circle={false}><EditIcon /></IconButton>
-              <IconButton variant="ghost" size="s" circle={false}><MenuIcon /></IconButton>
+              <IconButton variant="accent" size="s" circle={false}><EditIcon /></IconButton>
+              <IconButton variant="tertiary" size="s" circle={false}><MenuIcon /></IconButton>
               <IconButton variant="text" size="s" circle={false}><CloseIcon /></IconButton>
             </div>
           </div>
@@ -360,8 +382,8 @@ export const CompleteMatrix: Story = {
             <h4 style={{ marginBottom: '8px', fontSize: '14px' }}>Size: XS</h4>
             <div style={{ display: 'flex', gap: '12px' }}>
               <IconButton variant="primary" size="xs" circle={false}><SearchIcon /></IconButton>
-              <IconButton variant="secondary" size="xs" circle={false}><EditIcon /></IconButton>
-              <IconButton variant="ghost" size="xs" circle={false}><MenuIcon /></IconButton>
+              <IconButton variant="accent" size="xs" circle={false}><EditIcon /></IconButton>
+              <IconButton variant="tertiary" size="xs" circle={false}><MenuIcon /></IconButton>
               <IconButton variant="text" size="xs" circle={false}><CloseIcon /></IconButton>
             </div>
           </div>
@@ -374,8 +396,8 @@ export const CompleteMatrix: Story = {
             <h4 style={{ marginBottom: '8px', fontSize: '14px' }}>Size: S</h4>
             <div style={{ display: 'flex', gap: '12px' }}>
               <IconButton variant="primary" size="s" circle={true}><SearchIcon /></IconButton>
-              <IconButton variant="secondary" size="s" circle={true}><EditIcon /></IconButton>
-              <IconButton variant="ghost" size="s" circle={true}><MenuIcon /></IconButton>
+              <IconButton variant="accent" size="s" circle={true}><EditIcon /></IconButton>
+              <IconButton variant="tertiary" size="s" circle={true}><MenuIcon /></IconButton>
               <IconButton variant="text" size="s" circle={true}><CloseIcon /></IconButton>
             </div>
           </div>
@@ -383,8 +405,8 @@ export const CompleteMatrix: Story = {
             <h4 style={{ marginBottom: '8px', fontSize: '14px' }}>Size: XS</h4>
             <div style={{ display: 'flex', gap: '12px' }}>
               <IconButton variant="primary" size="xs" circle={true}><SearchIcon /></IconButton>
-              <IconButton variant="secondary" size="xs" circle={true}><EditIcon /></IconButton>
-              <IconButton variant="ghost" size="xs" circle={true}><MenuIcon /></IconButton>
+              <IconButton variant="accent" size="xs" circle={true}><EditIcon /></IconButton>
+              <IconButton variant="tertiary" size="xs" circle={true}><MenuIcon /></IconButton>
               <IconButton variant="text" size="xs" circle={true}><CloseIcon /></IconButton>
             </div>
           </div>

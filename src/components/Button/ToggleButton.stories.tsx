@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React, { useState } from 'react';
+import '../../tokens/tokens.css';
 
 // Simple ToggleButton component for documentation purposes
 interface ToggleButtonProps {
@@ -19,8 +20,21 @@ const ToggleButton: React.FC<ToggleButtonProps> = ({
   onChange,
   children,
 }) => {
-  const heights = { l: '48px', s: '40px', xs: '32px' };
-  const paddings = { l: '16px', s: '12px', xs: '8px' };
+  const heights = { 
+    l: 'var(--scale-600)', 
+    s: 'var(--scale-500)', 
+    xs: 'var(--scale-400)' 
+  };
+  const paddings = { 
+    l: 'var(--gap-m)', 
+    s: 'var(--gap-s)', 
+    xs: 'var(--gap-xs)' 
+  };
+  const fontSizes = {
+    l: 'var(--font-size-m)',
+    s: 'var(--font-size-s)',
+    xs: 'var(--font-size-xs)'
+  };
 
   return (
     <button
@@ -32,25 +46,26 @@ const ToggleButton: React.FC<ToggleButtonProps> = ({
         height: heights[size],
         padding: type === 'iconOnly' ? '0' : `0 ${paddings[size]}`,
         minWidth: type === 'iconOnly' ? heights[size] : 'auto',
-        backgroundColor: selected ? '#5747ea' : '#f5f5f5',
-        color: selected ? '#fff' : '#333',
-        border: '1px solid',
-        borderColor: selected ? '#5747ea' : '#e0e0e0',
-        borderRadius: singleButton ? '8px' : '0',
-        borderLeftWidth: !singleButton ? '0' : '1px',
+        backgroundColor: selected ? 'var(--color-accent-default)' : 'var(--color-surface-layer)',
+        color: selected ? 'var(--color-content-on-inverted-heading)' : 'var(--color-content-primary)',
+        border: 'var(--stroke-thin) solid',
+        borderColor: selected ? 'var(--color-accent-default)' : 'var(--color-stroke-subtle)',
+        borderRadius: singleButton ? 'var(--radius-m)' : '0',
+        borderLeftWidth: !singleButton ? '0' : 'var(--stroke-thin)',
         cursor: 'pointer',
         transition: 'all 0.2s',
         fontWeight: 500,
-        fontSize: size === 'xs' ? '12px' : size === 's' ? '14px' : '16px',
+        fontSize: fontSizes[size],
+        fontFamily: 'var(--font-family-default)',
       }}
       onMouseEnter={(e) => {
         if (!selected) {
-          e.currentTarget.style.backgroundColor = '#ebebeb';
+          e.currentTarget.style.backgroundColor = 'var(--color-surface-layer-strong)';
         }
       }}
       onMouseLeave={(e) => {
         if (!selected) {
-          e.currentTarget.style.backgroundColor = '#f5f5f5';
+          e.currentTarget.style.backgroundColor = 'var(--color-surface-layer)';
         }
       }}
     >
@@ -69,7 +84,7 @@ const ToggleButtonGroup: React.FC<ToggleButtonGroupProps> = ({ children, style }
   <div
     style={{
       display: 'inline-flex',
-      borderRadius: '8px',
+      borderRadius: 'var(--radius-m)',
       overflow: 'hidden',
       ...style,
     }}
@@ -129,7 +144,7 @@ const AlignRightIcon = () => (
 );
 
 const meta: Meta<typeof ToggleButton> = {
-  title: 'MindSet Design System/ToggleButton',
+  title: 'Components/Button/ToggleButton',
   component: ToggleButton,
   parameters: {
     layout: 'centered',

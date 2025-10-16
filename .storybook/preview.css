@@ -1,0 +1,46 @@
+/* Storybook global styles - Apply design system tokens */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+
+body {
+  font-family: var(--font-family-default);
+  color: var(--color-content-primary);
+  background-color: var(--color-surface-default);
+  margin: 0;
+  padding: 0;
+}
+
+/* Storybook docs page styling */
+.sbdocs {
+  font-family: var(--font-family-default) !important;
+}
+
+.sbdocs h1,
+.sbdocs h2,
+.sbdocs h3,
+.sbdocs h4,
+.sbdocs h5,
+.sbdocs h6 {
+  font-family: var(--font-family-default) !important;
+  color: var(--color-content-primary);
+}
+
+.sbdocs p,
+.sbdocs li,
+.sbdocs code {
+  font-family: var(--font-family-default) !important;
+}
+
+.sbdocs pre code {
+  font-family: var(--font-family-mono) !important;
+}
+
+/* Story canvas styling */
+.sb-show-main {
+  background-color: var(--color-surface-default);
+}
+
+/* Controls panel */
+.docblock-argstable {
+  font-family: var(--font-family-default) !important;
+}

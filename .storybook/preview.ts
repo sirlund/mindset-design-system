@@ -1,4 +1,6 @@
 import type { Preview } from '@storybook/react-vite'
+import '../src/tokens/tokens.css'
+import './preview.css'
 
 const preview: Preview = {
   parameters: {
@@ -14,7 +16,35 @@ const preview: Preview = {
       // 'error' - fail CI on a11y violations
       // 'off' - skip a11y checks entirely
       test: 'todo'
-    }
+    },
+
+    options: {
+      storySort: {
+        order: [
+          'MindSet Design System',
+          [
+            'Introduction',
+            'Design Tokens',
+            'Components',
+            ['Button', 'Card', 'Icon'],
+          ],
+        ],
+      },
+    },
+
+    backgrounds: {
+      default: 'light',
+      values: [
+        {
+          name: 'light',
+          value: 'var(--color-surface-default)',
+        },
+        {
+          name: 'dark',
+          value: 'var(--color-surface-background-inverted)',
+        },
+      ],
+    },
   },
 };
 
