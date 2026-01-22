@@ -1,7 +1,7 @@
 {
   "name": "@sirlund/mindset-ui",
   "description": "MindSet Design System - Storybook documentation and component library extracted from Figma",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "author": "MindSet Team",
   "main": "./dist/index.cjs",
