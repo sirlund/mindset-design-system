@@ -228,6 +228,8 @@
   --color-accent-strong: var(--color-blue-600);
   --color-accent-lighter: var(--color-blue-100);
   --color-accent-light: var(--color-blue-200);
+  --color-accent-weak: var(--color-blue-200);
+  --color-accent-weaker: var(--color-blue-100);
   
   /* Primary Colors */
   --color-primary-default: var(--color-base-black);
@@ -331,6 +333,8 @@
     --color-accent-light: var(--color-blue-600);
     --color-accent-subtle: var(--color-blue-500);
     --color-accent-strong: var(--color-blue-300);
+    --color-accent-weak: var(--color-blue-600);
+    --color-accent-weaker: var(--color-blue-700);
     
     --color-primary-default: var(--color-base-white);
     --color-primary-inverted: var(--color-base-black);

@@ -1,7 +1,7 @@
 {
   "name": "@sirlund/mindset-ui",
   "description": "MindSet Design System - Storybook documentation and component library extracted from Figma",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "type": "module",
   "author": "MindSet Team",
   "main": "./dist/index.cjs",
@@ -18,7 +18,8 @@
         "default": "./dist/index.cjs"
       }
     },
-    "./styles.css": "./dist/styles.css"
+    "./styles.css": "./dist/styles.css",
+    "./manifest": "./dist/components-manifest.json"
   },
   "files": [
     "dist",
@@ -34,7 +35,7 @@
     "lint": "eslint .",
     "dev": "storybook dev -p 6006",
     "build": "storybook build",
-    "build:lib": "tsup && tsc -p tsconfig.build.json --emitDeclarationOnly && node scripts/build-css.mjs"
+    "build:lib": "tsup && tsc -p tsconfig.build.json --emitDeclarationOnly && node scripts/build-css.mjs && node scripts/generate-manifest.mjs"
   },
   "peerDependencies": {
     "react": "^18.0.0 || ^19.0.0",
