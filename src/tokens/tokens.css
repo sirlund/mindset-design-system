@@ -324,10 +324,10 @@
 
 /* ========================================
    DARK MODE OVERRIDES
+   Use data-theme="dark" on html or body to enable dark mode
    ======================================== */
 
-@media (prefers-color-scheme: dark) {
-  :root {
+[data-theme="dark"] {
     /* System Colors - Dark Mode adjustments */
     --color-accent-lighter: var(--color-blue-700);
     --color-accent-light: var(--color-blue-600);
@@ -394,5 +394,4 @@
     --color-build-function: var(--color-amber-300);
     --color-build-input: var(--color-teal-300);
     --color-build-workflow: var(--color-pink-300);
-  }
 }
